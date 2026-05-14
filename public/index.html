@@ -1,12 +1,221 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adham Portfolio</title>
-  </head>
-  <body class="bg-gray-900">
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Adham Aladwash — Mechatronics Engineer & Junior Data Scientist. Portfolio of projects, skills, and experience."/>
+  <title>Adham Aladwash | Mechatronics Engineer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      border: 3px solid #58a6ff;
+      margin-bottom: 16px;
+      object-fit: cover;
+    }
+    header h1 { font-size: 28px; font-weight: 600; }
+    header p { font-size: 15px; color: #8b949e; margin-top: 6px; }
+    .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .badge {
+      font-size: 12px; padding: 4px 12px;
+      border-radius: 99px;
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      background: #0d1117;
+    }
+    .socials { margin-top: 18px; display: flex; justify-content: center; gap: 16px; }
+    .socials a { font-size: 14px; color: #8b949e; }
+    .socials a:hover { color: #58a6ff; }
+
+    section { max-width: 780px; margin: 0 auto; padding: 50px 20px; }
+    section h2 {
+      font-size: 18px; font-weight: 600;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 10px; margin-bottom: 24px;
+      color: #e6edf3;
+    }
+
+    .about p { font-size: 15px; color: #8b949e; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .skill-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .skill-card h4 { font-size: 12px; color: #8b949e; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .skill-card p { font-size: 13px; color: #e6edf3; }
+
+    .timeline { display: flex; flex-direction: column; gap: 20px; }
+    .timeline-item {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .timeline-item h3 { font-size: 15px; font-weight: 600; }
+    .timeline-item span { font-size: 12px; color: #58a6ff; display: block; margin: 4px 0 8px; }
+    .timeline-item p { font-size: 13px; color: #8b949e; }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .project-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+    .project-card:hover { border-color: #58a6ff; }
+    .project-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .project-card p { font-size: 13px; color: #8b949e; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .project-tags span {
+      font-size: 11px; padding: 2px 8px;
+      border-radius: 99px;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      color: #8b949e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #30363d;
+      font-size: 13px;
+      color: #8b949e;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="profile.jpg" alt="Adham Aladwash" />
+  <h1>Adham Aladwash</h1>
+  <p>Mechatronics Engineer · Junior Data Scientist</p>
+  <div class="badges">
+    <span class="badge">GPA 3.85 / 4.0</span>
+    <span class="badge">Delta University</span>
+    <span class="badge">Damietta, Egypt</span>
+  </div>
+  <div class="socials">
+    <a href="https://linkedin.com/in/adham-aladwash" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ADHAMALADWASH" target="_blank">GitHub</a>
+    <a href="mailto:adhamaladwash71@gmail.com">Email</a>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    Mechatronics Engineering undergraduate passionate about bridging hardware and data.
+    I've worked hands-on with automotive electrical systems at Ghabour Auto and currently
+    build data pipelines and dashboards as a Data Science intern at DEPI. My toolkit spans
+    Python, C, SolidWorks, and machine learning — from embedded systems to real-world prototypes.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>Programming</h4>
+      <p>Python · C · C++ · SQL</p>
+    </div>
+    <div class="skill-card">
+      <h4>Data Science</h4>
+      <p>ML · Pandas · NumPy · Matplotlib · Seaborn</p>
+    </div>
+    <div class="skill-card">
+      <h4>Engineering Tools</h4>
+      <p>SolidWorks · AutoCAD · 3D Modeling</p>
+    </div>
+    <div class="skill-card">
+      <h4>Languages</h4>
+      <p>Arabic (Native) · English (Professional)</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Data Science Intern — DEPI</h3>
+      <span>Jun 2025 – Present</span>
+      <p>Data logging, statistical analysis, dashboards, and relational database design using Python.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Automotive Engineering Intern — Ghabour Auto</h3>
+      <span>Jun 2025 – Jul 2025</span>
+      <p>Diagnosed electrical/electronic faults, performed engine repairs, and assisted with battery recycling.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Split Bearing Housing</h3>
+      <p>Designed a split-clamp bearing bracket in SolidWorks and 3D printed a functional PLA prototype.</p>
+      <div class="project-tags">
+        <span>SolidWorks</span><span>3D Printing</span><span>DfM</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Data Analysis Pipeline</h3>
+      <p>Built end-to-end data logging and visualization workflows using Python at DEPI internship.</p>
+      <div class="project-tags">
+        <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Education & Certifications</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>B.Sc. Mechatronics Engineering — Delta University</h3>
+      <span>Oct 2021 – Jun 2027</span>
+      <p>GPA: 3.85 / 4.0 — Excellent Standing</p>
+    </div>
+    <div class="timeline-item">
+      <h3>CS50: Introduction to Computer Science — Harvard / EDX</h3>
+      <span>Aug – Oct 2022</span>
+      <p>C, C#, Python, algorithms, and software design fundamentals.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>C Programming Foundations — Dartmouth / EDX</h3>
+      <span>Aug – Sep 2023</span>
+      <p>Systems-level C programming and low-level memory management.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Adham Aladwash · <a href="mailto:adhamaladwash71@gmail.com">adhamaladwash71@gmail.com</a>
+</footer>
+
+</body>
 </html>
